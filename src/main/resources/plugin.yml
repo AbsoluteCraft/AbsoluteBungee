@@ -1,0 +1,5 @@
+name: AbsoluteBungee
+main: com.absolutecraft.bungee.AbsoluteBungee
+version: 1.0
+depend: []
+author: boveybrawlers

@@ -1,0 +1,30 @@
+### Maven template
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Eclipse stuff
+.classpath
+.project
+.settings/
+
+# We use maven!
+build.xml
+
+# various other potential build files
+build/
+bin/
+dist/
+manifest.mf
+
+.DS_Store/
+
+# intellij
+*.iml
+*.ipr
+*.iws
+.idea/
