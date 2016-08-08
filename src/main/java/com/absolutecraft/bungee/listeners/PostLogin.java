@@ -30,7 +30,7 @@ public class PostLogin implements Listener {
         JSONObject body = new JSONObject();
         body.put("uuid", player.getUniqueId());
         body.put("username", player.getName());
-
+        
         this.client.post("/player/join", body, new Callback<JsonNode>() {
             public void cancelled() {}
             public void failed(UnirestException e) {
