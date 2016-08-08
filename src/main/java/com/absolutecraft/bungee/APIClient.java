@@ -19,8 +19,8 @@ public class APIClient {
 	private String apiKey = null;
 
 	public APIClient(AbsoluteBungee plugin) {
-		this.plugin = plugin;
-		
+	    this.plugin = plugin;
+
         this.apiKey = plugin.getConfig().getString("api_key");
         if(this.apiKey == null) {
             this.plugin.onDisable();
