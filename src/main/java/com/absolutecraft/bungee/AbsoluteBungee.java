@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 
+import com.absolutecraft.bungee.listeners.PlayerDisconnect;
 import com.absolutecraft.bungee.listeners.PostLogin;
 
 import net.md_5.bungee.api.plugin.Plugin;
@@ -26,11 +27,13 @@ public class AbsoluteBungee extends Plugin {
 		}
 		
 		this.getProxy().getPluginManager().registerListener(this, new PostLogin(this));
+        this.getProxy().getPluginManager().registerListener(this, new PlayerDisconnect(this));
     }
 	
 	@Override
 	public void onDisable() {
 	    this.getProxy().getPluginManager().unregisterListener(new PostLogin(this));
+        this.getProxy().getPluginManager().unregisterListener(new PlayerDisconnect(this));
 	}
 	
 	protected Configuration getConfig() {
