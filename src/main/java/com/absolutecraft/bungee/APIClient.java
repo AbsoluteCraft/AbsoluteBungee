@@ -7,8 +7,6 @@ import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.async.Callback;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import com.mashape.unirest.request.HttpRequestWithBody;
-import com.mashape.unirest.request.body.RequestBodyEntity;
 import net.md_5.bungee.api.plugin.Plugin;
 
 import org.json.JSONObject;
@@ -23,7 +21,7 @@ public class APIClient {
 	public APIClient(AbsoluteBungee plugin) {
 		this.plugin = plugin;
 		
-		this.apiKey = plugin.getConfig().getString("api_key");
+        this.apiKey = plugin.getConfig().getString("api_key");
         if(this.apiKey == null) {
             this.plugin.onDisable();
         }
@@ -44,10 +42,10 @@ public class APIClient {
      */
     public Future<HttpResponse<JsonNode>> get(String url, JSONObject body, Callback<JsonNode> callback) {
         return Unirest.post(this.buildUrl(url))
-                .header("Accept", "application/json")
-                .header("Content-Type", "application/json")
-                .body(body)
-                .asJsonAsync(callback);
+            .header("Accept", "application/json")
+            .header("Content-Type", "application/json")
+            .body(body)
+            .asJsonAsync(callback);
     }
 
     /**
@@ -60,10 +58,10 @@ public class APIClient {
      */
     public Future<HttpResponse<JsonNode>> post(String url, JSONObject body, Callback<JsonNode> callback) {
         return Unirest.post(this.buildUrl(url))
-                .header("Accept", "application/json")
-                .header("Content-Type", "application/json")
-                .body(body)
-                .asJsonAsync(callback);
+            .header("Accept", "application/json")
+            .header("Content-Type", "application/json")
+            .body(body)
+            .asJsonAsync(callback);
     }
 
     /**
@@ -75,12 +73,12 @@ public class APIClient {
      */
     public Future<HttpResponse<JsonNode>> post(String url, JSONObject body) {
         return Unirest.post(this.buildUrl(url))
-                .body(body)
-                .asJsonAsync(new Callback<JsonNode>() {
-                    public void completed(HttpResponse<JsonNode> httpResponse) {}
-                    public void failed(UnirestException e) {}
-                    public void cancelled() {}
-                });
+            .body(body)
+            .asJsonAsync(new Callback<JsonNode>() {
+                public void completed(HttpResponse<JsonNode> httpResponse) {}
+                public void failed(UnirestException e) {}
+                public void cancelled() {}
+            });
     }
 
     private String buildUrl(String url) {
