@@ -13,10 +13,10 @@ import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
 
 public class AbsoluteBungee extends Plugin {
-	
-	private Configuration config;
-	
-	@Override
+
+    private Configuration config;
+
+    @Override
     public void onEnable() {
 		File configFile = new File(this.getDataFolder(), "config.yml");
 		try {
