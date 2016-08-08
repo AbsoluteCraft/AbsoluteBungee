@@ -18,7 +18,7 @@ public class APIClient {
 	private String baseUrl = "https://api.absolutecraft.co.uk";
 	private String apiKey = null;
 
-	public APIClient(AbsoluteBungee plugin) {
+    public APIClient(AbsoluteBungee plugin) {
 	    this.plugin = plugin;
 
         this.apiKey = plugin.getConfig().getString("api_key");
@@ -30,7 +30,7 @@ public class APIClient {
         if(baseUrl != null) {
             this.baseUrl = baseUrl;
         }
-	}
+    }
 
     /**
      * Make an async get request
