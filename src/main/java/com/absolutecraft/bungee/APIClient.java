@@ -13,10 +13,10 @@ import org.json.JSONObject;
 
 public class APIClient {
 	
-	private Plugin plugin;
-	
-	private String baseUrl = "https://api.absolutecraft.co.uk";
-	private String apiKey = null;
+    private Plugin plugin;
+    
+    private String baseUrl = "https://api.absolutecraft.co.uk";
+    private String apiKey = null;
 
     public APIClient(AbsoluteBungee plugin) {
 	    this.plugin = plugin;
