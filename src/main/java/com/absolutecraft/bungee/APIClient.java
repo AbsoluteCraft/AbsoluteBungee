@@ -14,7 +14,7 @@ import org.json.JSONObject;
 public class APIClient {
 	
     private Plugin plugin;
-    
+
     private String baseUrl = "https://api.absolutecraft.co.uk";
     private String apiKey = null;
 
@@ -88,4 +88,5 @@ public class APIClient {
 
         return this.baseUrl + url;
     }
+    
 }

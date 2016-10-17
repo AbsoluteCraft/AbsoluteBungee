@@ -34,13 +34,13 @@ public class PlayerDisconnect implements Listener {
         this.client.post("/player/leave", body, new Callback<JsonNode>() {
             public void cancelled() {}
             public void failed(UnirestException e) {
-                System.out.println("API player/leave failed");
+            	plugin.getLogger().log(Level.SEVERE, "API player/leave failed");
             }
 
             public void completed(HttpResponse<JsonNode> response) {
                 JSONObject data = response.getBody().getObject();
 
-                System.out.println("Player " + data.get("id") + " - " + data.get("username") + " left!");
+                plugin.getLogger().log(Level.INFO, "Player " + data.get("id") + " - " + data.get("username") + " left!");
             }
         });
     }

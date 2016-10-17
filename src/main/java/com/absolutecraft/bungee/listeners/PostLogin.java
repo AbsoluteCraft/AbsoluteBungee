@@ -13,6 +13,8 @@ import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 import org.json.JSONObject;
 
+import java.util.logging.Level;
+
 public class PostLogin implements Listener {
 
     final private AbsoluteBungee plugin;
@@ -39,8 +41,8 @@ public class PostLogin implements Listener {
 
             public void completed(HttpResponse<JsonNode> response) {
                 JSONObject data = response.getBody().getObject();
-
-                System.out.println("Player " + data.get("id") + " - " + data.get("username") + " joined!");
+                
+                plugin.getLogger().log(Level.INFO, "Player " + data.get("id") + " - " + data.get("username") + " joined!");
             }
         });
     }

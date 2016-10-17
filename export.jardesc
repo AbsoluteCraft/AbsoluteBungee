@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="/Users/danbovey/Documents/AbsoluteCraft/Bungee/plugins/AbsoluteBungee.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/AbsoluteBungee/export.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <folder path="/AbsoluteBungee/target"/>
+        <javaElement handleIdentifier="=AbsoluteBungee/src\/test\/resources"/>
+        <folder path="/AbsoluteBungee/src"/>
+        <file path="/AbsoluteBungee/pom.xml"/>
+        <javaElement handleIdentifier="=AbsoluteBungee/src\/main\/java"/>
+        <javaElement handleIdentifier="=AbsoluteBungee/src\/main\/resources"/>
+        <file path="/AbsoluteBungee/AbsoluteBungee.iml"/>
+        <javaElement handleIdentifier="=AbsoluteBungee/src\/test\/java"/>
+    </selectedElements>
+</jardesc>
